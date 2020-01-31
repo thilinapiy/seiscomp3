@@ -2,6 +2,49 @@
 
 ## Release YYYY.ddd
 
+```SC_API_VERSION 13.0.0```
+```Schema version 0.11```
+
+* Python 3 support: if Python 3 is the default Python interpreter on the host
+  system it will be used by the build system. All SeisComP Python scripts
+  were ported to Python 3 syntax. At the same time the minimum Python 2 version
+  is now 2.7.
+
+* Qt5 support: The GUIs now support compiling with Qt5. If Qt5 is present on
+  the host system the build system will prefer it over Qt4. Both major versions
+  of Qt are supported.
+
+* Database 64bit oids: The database reader supports now 64bit oids. The shipped
+  MySQL/MariaDB SQL script now creates 64bit oids.
+
+* scesv
+
+  * Added configuration parameter 'recenterMap' to control map centering
+
+* scolv
+
+  * Add event type to left hand summary panel
+
+* scqc
+
+  * Added description of plugin configuration parameters. Default for writing
+    to the database is false.
+  * Added more QC parameters to the documentation
+
+* trunk
+
+  * Added Array.bytes() to Python wrappers (only)
+
+* seedlink
+
+  * Support websocket connections from https://github.com/crotwell/seisplotjs-seedlink
+  * Fix config to properly support multiple sources (plugins) per station
+  * Use unambiguous station ID (net.station)
+
+## Release 2018.327 patch18
+
+```SC_API_VERSION 12.2.0```
+
 * system
 
   * Add dependencies for Debian 9 and Debian 10
@@ -16,21 +59,13 @@
 * scesv
 
   * Fixed region filter with event list which did not work correctly
-  * Added configuration paraemeter 'recenterMap' to control map centering
 
 * scolv
 
   * Add option `askForConfirmation` to custom commits to allow
     inspection of the options to be applied.
   * Open dialog when a custom commit is activated together with shift key.
-  * Add event type to left hand summary panel
   * Add `visibleMagnitudes` to description
-
-* scqc
-
-  * Added description of plugin configuration parameters. Default for writing
-   to the database is false.
-  * Added more QC parameters to the documentation
 
 * scconfig
 
@@ -44,16 +79,6 @@
 
   * Added option --origin-id-suffix to name relocated origins
     using the original publicID plus the specified suffix
-
-* trunk
-
-  * Added Array.bytes() to Python wrappers (only)
-
-* seedlink
-
-  * Support websocket connections from https://github.com/crotwell/seisplotjs-seedlink
-  * Fix config to properly support multiple sources (plugins) per station
-  * Use unambiguous station ID (net.station)
 
 ## Release 2018.327 patch17
 
