@@ -1,6 +1,6 @@
 # Jakarta
 
-## Release YYYY.ddd
+## Release 2020.030
 
 ```SC_API_VERSION 13.0.0```
 ```Schema version 0.11```
